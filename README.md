@@ -23,6 +23,10 @@ The script plots a momentum histogram and a zero-line marker. Histogram colors d
 3. Add the script to a chart.
 4. Adjust the inputs and verify its behavior on your intended market and timeframe.
 
+## Implementation note
+
+The current source declares a `BB MultFactor` input, but the Bollinger Band deviation calculation uses `KC MultFactor` instead. As a result, the `BB MultFactor` setting appears to have no effect in the current implementation. This may be an implementation bug; confirm the intended behavior before changing it because it can affect squeeze-state signals. See [issue #2](https://github.com/Artasorias/Mark-V/issues/2).
+
 ## Important notes
 
 - The source uses Pine Script syntax; this is not a JavaScript package.
